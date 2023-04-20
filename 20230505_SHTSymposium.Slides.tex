@@ -1,6 +1,6 @@
 \title{X-ray microtomography}
 \author{David Haberthür}
-\date{\today\xspace | Symposium Schweizerische Gesellschaft für Histologie-Technik 2023}
+\date{5. Mai 2023 | Symposium Schweizerische Gesellschaft für Histologie-Technik}
 
 \usetheme{UniBern}
 
@@ -44,7 +44,7 @@
 	per-symbol=/]{siunitx}
 \usepackage{microtype}
 \usepackage[absolute,overlay]{textpos}%for the \source{} command
-\usepackage[missing=main]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we just show `main'
+\usepackage[missing=of \today]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we overwrite it with the date
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
@@ -129,9 +129,9 @@
 		\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);
 		\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);
 	\end{tikzpicture}%
-	\hfill git.io/JqIBH\xspace|\xspace%
-	v. \href{https://github.com/habi/Lecture.Microtomography/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
-	p.\xspace\insertframenumber/\inserttotalframenumber%
+	\hfill bit.ly/SHTuCT\xspace|\xspace%
+	v.\xspace\href{https://github.com/habi/Talk.2023.SHTSymposium/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace%
+	s.\xspace\insertframenumber/\inserttotalframenumber%
 	\hspace*{4ex}%
 	\vspace{0.5ex}%
 	%\par%
@@ -224,32 +224,32 @@
 %\end{frame}
 
 \begin{frame}
-	\frametitle{Grüessech!}
+	\frametitle{Grüessech mitenang!}
 	\begin{itemize}
 		\item David Haberthür
 		\begin{itemize}
-			\item Physicist by trade
-			\item \href{https://boris.unibe.ch/2619/}{PhD in high resolution imaging of the lung}, Institute of Anatomy, University of Bern, Switzerland
-			\item Post-Doc I: Tomographic imaging at \href{https://www.psi.ch/sls/tomcat/}{TOMCAT}, \href{https://www.psi.ch/sls/}{Swiss Light Source}, \href{https://www.psi.ch/}{Paul Scherrer Institute}, Switzerland and working on the detector of the \href{http://globaldiagnostix.org}{GlobalDiagnostiX} project
-			\item Post-Doc II \& currently: Tomographic imaging in the \href{https://www.ana.unibe.ch/forschung/mikroct/research/}{\uct group}, Institute of Anatomy, University of Bern, Switzerland
+			\item Physiker
+			\item \href{https://boris.unibe.ch/2619/}{Dorktorarbeit über höchstaufgelöste tomographische Bildgebung in der Lunge} am Institut für Anatomie der Universität Bern
+			\item Post-Doc I: Tomographische Bildgebung von Allerlei an \href{https://www.psi.ch/sls/tomcat/}{TOMCAT} am \href{https://www.psi.ch/}{Paul Scherrer Institut}
+			  und Mitarbeit am \href{http://globaldiagnostix.org}{GlobalDiagnostiX}-Projekt
+			\item Post-Doc II \& Gegenwart: Tomographische Bildgebung von biomedizinischen Dingen in der \href{https://www.ana.unibe.ch/forschung/mikroct/research/}{\uct-Gruppe} am Institut für Anatomie der Universität Bern
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{\uct-group}
+	\frametitle{\uct-Gruppe}
 	\begin{columns}
 		\begin{column}{0.61\linewidth}
 			\begin{itemize}
 				\item microangioCT~\cite{Hlushchuk2018}
 				\begin{itemize}
-					\item Angiogenesis: heart, musculature~\cite{Nording2021} and bones
-					\item Vasculature: (mouse) brain~\cite{Hlushchuk2020}, (human) nerve scaffolds~\cite{Wuthrich2020}, (human) skin flaps~\cite{Zubler2021} and tumors
+					\item Angiogenese: Herz, Muskulatur~\cite{Nording2021} und Knochen
+					\item Gefässe: (Mäuse) Gehirn~\cite{Hlushchuk2020}, (humane) Nerven~\cite{Wuthrich2020}, (human) Hautgewebe~\cite{Zubler2021} und Tumore
 				\end{itemize}
-				\item Zebrafish musculature and gills~\cite{MesserliAaldijk2020}
-				\item (Lung) tumor detection and metastasis classification~\cite{Trappetti2021}
-				\item Collaborations with museums~\cite{Bochud2021} and scientist at UniBe~\cite{Halm2021} to scan a wide range of specimens
-				\item Automate \emph{all} the things!~\cite{Haberthur2021}
+				\item Zebrafish Muskulatur und Kiemen~\cite{MesserliAaldijk2020}
+				\item Erkennung und Klassierung von (Lungen) Tumoren und Metastasen~\cite{Trappetti2021}
+				\item Zusammenarbeit mit NMBE~\cite{Bochud2021} und Wissenschaftler:innen an der Universität Bern~\cite{Halm2021,Haberthur2023}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.37\linewidth}
@@ -264,13 +264,13 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Contents}
+\begin{frame}{Inhalt}
 	\tableofcontents
 \end{frame}
 
-\section{Imaging}
+\section{Bildgebung}
 \begin{frame}
-	\frametitle{Wavelength and scales}
+	\frametitle{Wellenlänge und Grössenordnungen}
 	\centering
 	\only<1|handout:1>{%
 		\includegraphics[height=\imheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
@@ -278,7 +278,7 @@
 		}%
 	\only<2|handout:2>{%
 		\includegraphics[height=\imheight]{./images/MIC-AM_techniques}%
-		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{with permission}%
+		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{, mit Erlaubnis}%
 		}
 \end{frame}
 
