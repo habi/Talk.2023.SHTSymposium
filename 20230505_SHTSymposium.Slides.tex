@@ -1,3 +1,5 @@
+% !TEX root = 20230505_SHTSymposium.Presentation.tex
+
 \title{X-ray microtomography}
 \author{David Haberthür}
 \date{5. Mai 2023 | Symposium Schweizerische Gesellschaft für Histologie-Technik}
@@ -44,7 +46,8 @@
 	per-symbol=/]{siunitx}
 \usepackage{microtype}
 \usepackage[absolute,overlay]{textpos}%for the \source{} command
-\usepackage[missing=of \today]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we overwrite it with the date
+\usepackage{datetime2}
+\usepackage[missing=\DTMnow]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we overwrite it with the time of build for the online version
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
