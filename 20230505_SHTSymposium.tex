@@ -1,11 +1,11 @@
 % Compile with:
 % latexmk -pdf -pvc -interaction=nonstopmode *Pres*.tex
 %\documentclass[aspectratio=169,draft, german]{beamer}
-\documentclass[aspectratio=169, ngerman]{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 \title{X-ray microtomography}
 \author{David Haberthür}
-\date{\today | Symposium Schweizerische Gesellschaft für Histologie-Technik 2023}
+\date{\today\xspace | Symposium Schweizerische Gesellschaft für Histologie-Technik 2023}
 
 \usetheme{UniBern}
 
@@ -24,13 +24,14 @@
 \newcommand{\eg}{e.\,g.\xspace}%
 \newcommand{\ie}{i.\,e.\xspace}%
 
+\usepackage[ngerman]{babel}
 \usepackage[backend=biber,
 	style=numeric,
 	url=false,
 	isbn=true,
 	maxnames=1,
 	sorting=none]{biblatex}
-\addbibresource{../../../Documents/library.bib}% FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
+\addbibresource{../../Documents/library.bib}% FastSSD, Windows or Mac works (on Linux/FastSSD we generated a 'Document' folder at the correct level and `ln -s ~/P/Documents/library.bib .` to it)
 \usepackage{standalone}
 \usepackage{tikz}
 	\usetikzlibrary{spy}
