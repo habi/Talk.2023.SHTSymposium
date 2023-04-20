@@ -9,8 +9,8 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: 20230505_SHTSymposium.Handout.tex
           args: -pdf -bibtex- -file-line-error -interaction=nonstopmode
+          root_file: 20230505_SHTSymposium.Handout.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
