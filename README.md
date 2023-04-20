@@ -2,4 +2,4 @@
 
 Mein Vortrag für das [Symposium](https://swisshistotech.ch/de/symposium-workshops) der [Schweizerischen Gesellschaft für Histologie-Technik](https://swisshistotech.ch/) am 5. Mai 2023.
 
-Die aktuellste Version des Vortrags ist jeweils hier zu finden: [https://habi.github.io/Talk.2023.SHTSymposium/20230505_SHTSymposium.pdf](https://habi.github.io/Talk.2023.SHTSymposium/20230505_SHTSymposium.pdf).
+Ein Handout der aktuellsten Version des Vortrags (ohne Animationen) ist jeweils hier zu finden: [https://habi.github.io/Talk.2023.SHTSymposium/20230505_SHTSymposium.Handout.pdf](https://habi.github.io/Talk.2023.SHTSymposium/20230505_SHTSymposium.Handout.pdf).

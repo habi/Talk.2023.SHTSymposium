@@ -9,21 +9,19 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: 20230505_SHTSymposium.tex
+          root_file: 20230505_SHTSymposium.Handout.tex
           args: -pdf -bibtex- -file-line-error -interaction=nonstopmode
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: 20230505_SHTSymposium.pdf
+          path: 20230505_SHTSymposium.Handout.pdf
       - name: Serve PDF from gh-pages branch
         run: |
           set -e
           # Configure git
           git config --global user.name "David Haberthür"
           git config --global user.email "email@davidhaberthuer.ch"
-          # https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-494158599
-          # git config --local lfs.https://github.com/.locksverify false
           # Setup SSH
           # Don't forget to generate and upload the key first!
           # See https://www.reddit.com/r/LaTeX/comments/cudaqz/github_actions_to_compile_latex_documents/f0hz61t/ for details
@@ -34,10 +32,11 @@ jobs:
           git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
           # Copy and commit the PDF file to the gh-pages branch
           git clone --depth=1 --branch gh-pages git@github.com:habi/Talk.2023.SHTSymposium.git pages
-          cp -f 20230505_SHTSymposium.pdf pages/20230505_SHTSymposium.pdf
+          cp -f 20230505_SHTSymposium.Handout.pdf pages/20230505_SHTSymposium.Handout.pdf
           cd pages
-          git add 20230505_SHTSymposium.pdf
+          git add 20230505_SHTSymposium.Handout.pdf
           git commit -m "Deploy new version of presentation handout to gh-pages branch"
           git push        
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+
