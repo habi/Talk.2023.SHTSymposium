@@ -41,13 +41,12 @@
 \usepackage[detect-all=true,
 	range-phrase=--,
 	range-units=single,
-	binary-units=true,
 	per-mode=symbol,
 	per-symbol=/]{siunitx}
 \usepackage{microtype}
 \usepackage[absolute,overlay]{textpos}%for the \source{} command
 \usepackage{datetime2}
-\usepackage[missing=\DTMnow]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we overwrite it with the time of build for the online version
+\usepackage[missing={\DTMnow}]{gitinfo2}% GitHub Actions don't pull in the commit hash, so we overwrite it with the time of build for the online version
 \usepackage{xspace}
 \usepackage{ccicons}
 \usepackage[version=4]{mhchem}
