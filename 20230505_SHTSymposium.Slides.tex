@@ -126,13 +126,20 @@
 	\multiply\progressbar@tmpdim by \progressbar@tmpcounta%
 	\divide\progressbar@tmpdim by \progressbar@tmpcountb%
 	\par%
-		\begin{tikzpicture}%
-			\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);%
-			\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
-		\end{tikzpicture}%
-		\hfill%
-		\mode<beamer>{bit.ly/SHTuCT\xspace|\xspace v.\xspace\href{https://github.com/habi/Talk.2023.SHTSymposium/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace\insertframenumber/\inserttotalframenumber}%
-		\mode<handout>{bit.ly/SHTuCT\xspace|\xspace\today\xspace|\xspace\insertframenumber/\inserttotalframenumber}%
+		\mode<beamer>{%
+			\begin{tikzpicture}%
+				\draw[ubGrey] (0,0) -- ++ (\progressbar@pbwd,0);%
+				\draw[draw=ubRed,fill=ubGrey] (\the\dimexpr\progressbar@tmpdim-\progressbar@rcircle\relax,.5\progressbar@pbht) circle (\progressbar@rcircle);%
+			\end{tikzpicture}%
+			\hfill%
+			bit.ly/SHTuCT\xspace|\xspace v.\xspace\href{https://github.com/habi/Talk.2023.SHTSymposium/commit/\gitHash}{\gitAbbrevHash}\xspace|\xspace\insertframenumber/\inserttotalframenumber%
+			}%
+		\mode<handout>{%
+			bit.ly/SHTuCT\hfill|\hfill%
+			Handout-Version vom \today\hfill|\hfill%
+			\insertframenumber/\inserttotalframenumber%
+			}%
+		\vspace{0.5ex}%
 }
 \addtobeamertemplate{footline}{}%
 {%
