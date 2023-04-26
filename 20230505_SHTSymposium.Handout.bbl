@@ -65,7 +65,13 @@
       \verb 10.1016/j.vph.2018.09.003
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/CPZYAGU3/Hlushchuk, Haberthür, Djonov - 2018 - Ex vivo microangioCT Advances in microvascular imaging(2).pdf
+      \verb /home/habi/Zotero/storage/CPZYAGU3/Hlushchuk, Haberthür, Djonov - 2018 - Ex vivo microangioCT Advances in microvascular imaging(2).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.vph.2018.09.003
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.vph.2018.09.003
       \endverb
     \endentry
     \entry{Nording2021}{article}{}
@@ -233,7 +239,13 @@
       \verb 10.1038/s41467-021-23499-w
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
+      \verb /home/habi/Zotero/storage/2IGTLRPL/s41467-021-23499-w.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/s41467-021-23499-w
       \endverb
     \endentry
     \entry{Hlushchuk2020}{article}{}
@@ -310,7 +322,13 @@
       \verb 10.1007/s00429-020-02158-8
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
+      \verb /home/habi/Zotero/storage/IWK6PIYP/Hlushchuk et al. - 2020 - Innovative high-resolution microCT imaging of animal brain vasculature.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s00429-020-02158-8
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s00429-020-02158-8
       \endverb
     \endentry
     \entry{Wuthrich2020}{article}{}
@@ -440,7 +458,13 @@
       \verb 10.1016/j.msec.2020.111311
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/Users/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
+      \verb /home/habi/Zotero/storage/FI29PAE3/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(3).pdf;/home/habi/Zotero/storage/H7PE4KYH/Wüthrich et al. - 2020 - Development of vascularized nerve scaffold using perfusion-decellularization and recellularization(2).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.msec.2020.111311
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.msec.2020.111311
       \endverb
     \endentry
     \entry{Zubler2021}{article}{}
@@ -494,12 +518,22 @@
       \field{journaltitle}{Annals of Anatomy - Anatomischer Anzeiger}
       \field{month}{3}
       \field{title}{The Anatomical Reliability of the Superficial Circumflex Iliac Artery Perforator ({{SCIP}}) Flap}
+      \field{urlday}{23}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
       \field{volume}{234}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{pages}{151624}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1016/j.aanat.2020.151624
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0940960220301680
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0940960220301680
       \endverb
       \keyw{Deep branch,Perforator flap,Reconstructive surgery,Superficial branch,Superficial circumflex iliac artery,Superficial circumflex iliac artery perforator fla}
     \endentry
@@ -585,15 +619,25 @@
       \field{month}{2}
       \field{number}{2}
       \field{title}{Adaptation Mechanism of the Adult Zebrafish Respiratory Organ to Endurance Training}
+      \field{urlday}{6}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{volume}{15}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{pages}{e0228333}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1371/journal.pone.0228333
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
+      \verb /home/habi/Zotero/storage/WTJU4FVL/Messerli et al. - 2020 - Adaptation mechanism of the adult zebrafish respiratory organ to endurance training(2).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0228333
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0228333
       \endverb
     \endentry
     \entry{Trappetti2021}{article}{}
@@ -676,12 +720,22 @@
       \field{journaltitle}{International Journal of Radiation Oncology*Biology*Physics}
       \field{month}{8}
       \field{title}{Synchrotron {{Microbeam Radiotherapy}} for the Treatment of Lung Carcinoma: A Pre-Clinical Study}
+      \field{urlday}{16}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.ijrobp.2021.07.1717
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
+      \verb /home/habi/Zotero/storage/JYNQVSIU/Trappetti et al. - 2021 - Synchrotron Microbeam Radiation Therapy for the Treatment of Lung Carcinoma A Preclinical Study.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0360301621026304
       \endverb
     \endentry
     \entry{Bochud2021}{article}{}
@@ -725,15 +779,25 @@
       \field{journaltitle}{ZooKeys}
       \field{month}{11}
       \field{title}{A New {{Diancta}} Species of the Family {{Diplommatinidae}} ({{Cyclophoroidea}}) from {{Vanua Levu Island}}, {{Fiji}}}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2021}
       \field{volume}{1073}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \field{pages}{1\bibrangedash 12}
       \range{pages}{12}
       \verb{doi}
       \verb 10.3897/zookeys.1073.73241
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
+      \verb /home/habi/Zotero/storage/RWXUCG8R/Bochud et al. - 2021 - A new Diancta species of the family Diplommatinidae (Cyclophoroidea) from Vanua Levu Island, Fiji.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://zookeys.pensoft.net/article/73241/
+      \endverb
+      \verb{url}
+      \verb https://zookeys.pensoft.net/article/73241/
       \endverb
     \endentry
     \entry{Halm2021}{article}{}
@@ -787,11 +851,89 @@
       \verb 10.1186/s40463-021-00522-0
       \endverb
       \verb{file}
-      \verb /Users/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
+      \verb /home/habi/Zotero/storage/3MDRKJYR/Halm et al. - 2021 - Micro-CT imaging of Thiel-embalmed and iodine-stained human temporal bone for 3D modeling.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/s40463-021-00522-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/s40463-021-00522-0
+      \endverb
+    \endentry
+    \entry{Haberthuer2023}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberthür},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=84ea9fb46ffbf07bc60fc647352ad435}{%
+           family={Law},
+           familyi={L\bibinitperiod},
+           given={Mikki},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1912e22c04700e5f32ad165109fd7015}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Kassandra},
+           giveni={K\bibinitperiod}}}%
+        {{hash=70934deda6bfea69302d6f504ba9f152}{%
+           family={Häsler},
+           familyi={H\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=80b1719708477d2cb174bbfbea96ab2e}{%
+           family={Seehausen},
+           familyi={S\bibinitperiod},
+           given={Ole},
+           giveni={O\bibinitperiod}}}%
+        {{hash=19d1c5f909bbd72b20042740109f3be6}{%
+           family={Hlushchuk},
+           familyi={H\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {bioRxiv}%
+      }
+      \strng{namehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{fullhash}{8015d964f7565cf1d07afc51cfc0746e}
+      \strng{bibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorfullhash}{8015d964f7565cf1d07afc51cfc0746e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A large collection of cichlids from Lake Victoria in Africa spanning a length range of 6 to 18 cm was nondestructively imaged using micro-computed tomography. We describe our method to efficiently obtain three-dimensional tomographic datasets of the oral and pharyngeal jaws and the whole skull of these fishes for accurately describing their morphology. The tomographic data we acquired (9.5 TB projection images) yielded 1.4 TB of three-dimensional image stacks used for extracting the relevant features of interest. Herein we present our method and an outlook on analyzing the acquired data; a morphological description of the oral and pharyngeal jaws of the fishes, a three-dimensional geometric morphometrics analysis of landmark features on the fish skulls, and a robust method to automatically extract the otoliths of the fishes from the tomographic data.}
+      \field{chapter}{New Results}
+      \field{eprintclass}{New Results}
+      \field{eprinttype}{bioRxiv}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{Microtomographic Investigation of a Large Corpus of Cichlids}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{2023.03.30.534917}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1101/2023.03.30.534917
+      \endverb
+      \verb{file}
+      \verb /home/habi/Zotero/storage/6WESNW3R/Haberthür et al. - 2023 - Microtomographic investigation of a large corpus o.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.biorxiv.org/content/10.1101/2023.03.30.534917v1
+      \endverb
+      \verb{url}
+      \verb https://www.biorxiv.org/content/10.1101/2023.03.30.534917v1
       \endverb
     \endentry
   \enddatalist
-  \missing{Haberthuer2023}
 \endrefsection
 \endinput
 
