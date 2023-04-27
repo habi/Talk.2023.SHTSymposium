@@ -1,0 +1,14 @@
+name: shtsymposium
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - ipywidgets
+  - pandas
+  - dask
+  - dask-image  
+  - matplotlib
+  - matplotlib-scalebar
+  - seaborn
+  - tqdm
