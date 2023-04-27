@@ -12,14 +12,12 @@
 %\end{frame}
 
 % Some often used abbreviations/commands
-\newcommand{\everyframe}{1}% use only every nth frame for the animations
+\newcommand{\everyframe}{100}% use only every nth frame for the animations
 \newcommand{\imwidth}{\linewidth}% set global image width
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
-\newcommand{\eg}{e.\,g.\xspace}%
-\newcommand{\ie}{i.\,e.\xspace}%
 
 \usepackage[ngerman]{babel}
 \usepackage[backend=biber,
@@ -252,9 +250,9 @@
 					\item Angiogenese: Herz, Muskulatur~\cite{Nording2021} und Knochen
 					\item Gefässe: (Mäuse) Gehirn~\cite{Hlushchuk2020}, (humane) Nerven~\cite{Wuthrich2020}, (human) Hautgewebe~\cite{Zubler2021} und Tumore
 				\end{itemize}
-				\item Zebrafish Muskulatur und Kiemen~\cite{MesserliAaldijk2020}
-				\item Erkennung und Klassierung von (Lungen) Tumoren und Metastasen~\cite{Trappetti2021}
-				\item Zusammenarbeit mit NMBE~\cite{Bochud2021} und Wissenschaftler:innen an der Universität Bern~\cite{Halm2021,Haberthuer2023}
+				\item Muskulatur und Kiemen von Zebrafischen~\cite{MesserliAaldijk2020}
+				\item Erkennung und Klassierung von Tumoren und Metastasen~\cite{Trappetti2021}
+				\item Zusammenarbeit mit NMBE~\cite{Bochud2021} und Wissenschaftler:innen der Uni Bern~\cite{Halm2021,Haberthuer2023}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.37\linewidth}
@@ -302,22 +300,9 @@
 	\end{columns}%
 \end{frame}
 
-\begin{frame}
-	\frametitle{Wellenlänge und Grössenordnungen}
-	\centering
-	\only<1|handout:1>{%
-		\includegraphics[height=\imheight]{./images/2000px-Electromagnetic_spectrum_with_sources}%
-		\source{w.wiki/7fz}{\ccbysa}%
-		}%
-	\only<2|handout:2>{%
-		\includegraphics[height=\imheight]{./images/MIC-AM_techniques}%
-		\sourcelink{https://anatomie.unibe.ch/tschanz}{Stefan Tschanz}{, mit Erlaubnis}%
-		}
-\end{frame}
-
 \section{(Mikro-)Tomographie}
 \begin{frame}
-	\frametitle{Computertomograph}
+	\frametitle{Computertomographie}
 	\centering
 	\mode<beamer>{%
 		\animategraphics[loop,height=\imheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
@@ -331,6 +316,18 @@
 
 \begin{frame}
 	\frametitle{\uct}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\input{animations/classicCT}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\only<1>{\input{animations/microCT}}%
+			\only<2|handout:0>{\input{animations/microCT_lr}}%
+			\only<3|handout:0>{\input{animations/microCT_hr}}%
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -478,6 +475,38 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{\uct in der Histologie}
+	\begin{itemize}
+		\item Virtuelle Schnitte in \emph{jeder} Richtung
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\uct in der Histologie}
+	\begin{itemize}
+		\item Virtuelle Schnitte in \emph{jeder} Richtung
+		\item Zeigen von solchen virtuellen Schnitten, z.B. anhand des Maus-Scans für Dea
+	\end{itemize}
+\end{frame}
+
+\renewcommand{\imwidth}{0.618\linewidth}
+\begin{frame}
+	\frametitle{\uct im Vergleich mit EM}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\includegraphics[width=\imwidth]{./images/gold-nanoparticles-srxtm}
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\includegraphics[width=\imwidth]{./images/gold-nanoparticles-em}			
+		\end{column}
+	\end{columns}
+	\centering
+	Bilder aus \cite{Haberthuer2009}
+\end{frame}			
+		
 \begin{frame}
 	\frametitle{Adiömersi!}
 \end{frame}
