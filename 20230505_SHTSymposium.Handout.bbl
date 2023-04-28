@@ -902,6 +902,7 @@
       \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
       \strng{authorfullhash}{8015d964f7565cf1d07afc51cfc0746e}
+      \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -1033,6 +1034,149 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/10.1007/s10278-013-9622-7
+      \endverb
+    \endentry
+    \entry{Haberthuer2021a}{article}{}
+      \name{author}{6}{}{%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberthür},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=212f72ffbbf1879c6b3f35c662e62545}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Eveline},
+           giveni={E\bibinitperiod}}}%
+        {{hash=bbef583fc461da2e631ef1a0c6ed8b97}{%
+           family={Barré},
+           familyi={B\bibinitperiod},
+           given={Sébastien\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=dc5bb91b45f6092d4062016cbf0d522f}{%
+           family={Cremona},
+           familyi={C\bibinitperiod},
+           given={Tiziana\bibnamedelima P},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=a8528e1939ee7aa7f6c0491eb11c1b8c}{%
+           family={Tschanz},
+           familyi={T\bibinitperiod},
+           given={Stefan\bibnamedelima A},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1a35007cd5154291bdaca8c1164d1e74}{%
+           family={Schittny},
+           familyi={S\bibinitperiod},
+           given={Johannes\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{fullhash}{1a04753f7460e2f028cd9684958a6007}
+      \strng{bibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorfullhash}{1a04753f7460e2f028cd9684958a6007}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Pulmonary acini represent the functional gas-exchanging units of the lung. Due to technical limitations, individual acini cannot be identified on microscopic lung sections. To overcome these limitations, we imaged the right lower lobes of instillation-fixed rat lungs from postnatal days P4, P10, P21, and P60 at the TOMCAT beamline of the Swiss Light Source synchrotron facility at a voxel size of 1.48 {$\mu$}m. Individual acini were segmented from the three-dimensional data by closing the airways at the transition from conducting to gas exchanging airways. For a subset of acini (N = 268), we followed the acinar development by stereologically assessing their volume and their number of alveoli. We found that the mean volume of the acini increases 23 times during the observed time-frame. The coefficients of variation dropped from 1.26 to 0.49 and the difference between the mean volumes of the fraction of the 20\% smallest to the 20\% largest acini decreased from a factor of 27.26 (day 4) to a factor of 4.07 (day 60), i.e. shows a smaller dispersion at later time points. The acinar volumes show a large variation early in lung development and homogenize during maturation of the lung by reducing their size distribution by a factor of 7 until adulthood. The homogenization of the acinar sizes hints at an optimization of the gas-exchange region in the lungs of adult animals and that acini of different size are not evenly distributed in the lungs. This likely leads to more homogeneous ventilation at later stages in lung development.}
+      \field{journaltitle}{PLOS ONE}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Pulmonary Acini Exhibit Complex Changes during Postnatal Rat Lung Development}
+      \field{volume}{16}
+      \field{year}{2021}
+      \field{pages}{e0257349}
+      \range{pages}{-1}
+      \verb{file}
+      \verb /home/habi/Zotero/storage/4BWE6VTU/Haberthür et al. - 2019 - Pulmonary acini exhibit complex changes during postnatal rat lung development(2).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0257349
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0257349
+      \endverb
+    \endentry
+    \entry{Haberthuer2009}{article}{}
+      \name{author}{7}{}{%
+        {{hash=31208204cf1e706905070d03cc964a87}{%
+           family={Haberthür},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ae3ba95c4313432436bc315b0d002a6d}{%
+           family={{Semmler-Behnke}},
+           familyi={S\bibinitperiod},
+           given={Manuela},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e25615e3156046dd7c789863eb2b8620}{%
+           family={Takenaka},
+           familyi={T\bibinitperiod},
+           given={Shinji},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2faa04af6cc7fe0c1851bbddba56e287}{%
+           family={Kreyling},
+           familyi={K\bibinitperiod},
+           given={Wolfgang\bibnamedelima G.},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e331fdbf4264f6cd0b58ab5f4898a883}{%
+           family={Stampanoni},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7b6987b783e8daffb54df30c6ad674e1}{%
+           family={Tsuda},
+           familyi={T\bibinitperiod},
+           given={Akira},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1a35007cd5154291bdaca8c1164d1e74}{%
+           family={Schittny},
+           familyi={S\bibinitperiod},
+           given={Johannes\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{fullhash}{e7b4adbd6344c594161e0ef82290a4ff}
+      \strng{bibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorbibnamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authornamehash}{7b578b3863fde0aa59a94fe262c5ab64}
+      \strng{authorfullhash}{e7b4adbd6344c594161e0ef82290a4ff}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The deposition sites of inhaled aerosols in the gas-exchange region of the lung represent one of the key parameters needed for the understanding of the interaction between these particles and lung tissue. In order to develop a method for three-dimensional imaging of sub-micron particles in lung tissue we applied gold particles (200 and 700 nm) to rat lungs by intratracheal instillation. The samples were scanned at TOMCAT, the beamline for TOmographic Microscopy and Coherent rAdiology experimenTs at the Swiss Light Source. The 200 nm particles were slightly below the detection capabilities of TOMCAT. Therefore, their localization was obtained only by electron microscopy. At a voxel size of 350 nm we observed single and clustered gold particles (700 nm) in alveoli, alveolar ducts, and small bronchioli. The locations of the gold particles were verified by transmission electron microscopical serial sections. We observed a very high correlation between these two imaging modalities. We conclude that a combination of x-ray tomographic microscopy and electron microscopy allows the full unrestricted 3D localization of particles smaller than the resolution of x-ray tomographic microscopy. We are planning to use this method for the verification of the simulation of particle deposition in the airway tree.}
+      \field{issn}{1742-6596}
+      \field{journaltitle}{J. Phys.: Conf. Ser.}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{1}
+      \field{title}{Multimodal Imaging for the Detection of Sub-Micron Particles in the Gas-Exchange Region of the Mammalian Lung}
+      \field{urlday}{27}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{volume}{186}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \field{pages}{012040}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-6596/186/1/012040
+      \endverb
+      \verb{file}
+      \verb /home/habi/Zotero/storage/J9Y8PR6L/2009-Multimodal_imaging_for_the_detection_of_sub-micron_particles_in_the_gas-exchange_region_of_the_mammalian_lung.pdf;/home/habi/Zotero/storage/MNL965RN/Haberthür et al. - 2009 - Multimodal imaging for the detection of sub-micron.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1742-6596/186/1/012040
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1742-6596/186/1/012040
       \endverb
     \endentry
   \enddatalist
