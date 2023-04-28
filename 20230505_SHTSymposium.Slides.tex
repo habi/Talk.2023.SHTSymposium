@@ -13,8 +13,8 @@
 
 % Some often used abbreviations/commands
 \newcommand{\everyframe}{100}% use only every nth frame for the animations
-\newcommand{\imwidth}{\linewidth}% set global image width
-\newcommand{\imheight}{0.618\paperheight}% set global image height
+\newcommand{\imagewidth}{\linewidth}% set global image width
+\newcommand{\imageheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
 \newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
@@ -257,11 +257,11 @@
 		\end{column}
 		\begin{column}{0.37\linewidth}
 			\centering
-			\includegraphics<1|handout:0>[width=\imwidth]{./images/1172}%
+			\includegraphics<1|handout:0>[width=\imagewidth]{./images/1172}%
 			\only<1|handout:0>{\source{brukersupport.com}{}}
-			\includegraphics<2>[width=\imwidth]{./images/1272}%
+			\includegraphics<2>[width=\imagewidth]{./images/1272}%
 			\only<2>{\source{bruker.com/skyscan1272}{}}
-			\includegraphics<3|handout:0>[width=\imwidth]{./images/2214}%
+			\includegraphics<3|handout:0>[width=\imagewidth]{./images/2214}%
 			\only<3|handout:0>{\source{bruker.com/skyscan2214}{}}
 		\end{column}
 	\end{columns}
@@ -285,7 +285,7 @@
 		\begin{column}{0.61\linewidth}%
 			\centering%
 			\only<1-2|handout:1>{%
-				\includegraphics[height=\imheight]{./images/Sagittal_brain_MRI}%
+				\includegraphics[height=\imageheight]{./images/Sagittal_brain_MRI}%
 				\source{w.wiki/7g4}{\ccbysa}%
 			}%
 			\only<3|handout:2>{%
@@ -305,11 +305,11 @@
 	\frametitle{Computertomographie}
 	\centering
 	\mode<beamer>{%
-		\animategraphics[loop,height=\imheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
+		\animategraphics[loop,height=\imageheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 	\mode<handout>{%
-		\includegraphics[height=\imheight]{./movies/ct-scanner/ct-scanner0001}%
+		\includegraphics[height=\imageheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
 		}
 \end{frame}
@@ -336,7 +336,7 @@
 		\begin{column}{0.49\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -348,7 +348,7 @@
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -361,10 +361,10 @@
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
-			\renewcommand{\imwidth}{0.1554\columnwidth}%
+			\renewcommand{\imagewidth}{0.1554\columnwidth}%
 			\only<6|handout:5>{%
 				\centering
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -378,7 +378,7 @@
 		\end{column}%
 		\begin{column}{0.49\linewidth}
 			\only<1|handout:1>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -389,10 +389,10 @@
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 			}%
-			\renewcommand{\imwidth}{0.1\columnwidth}%
+			\renewcommand{\imagewidth}{0.1\columnwidth}%
 			\only<2|handout:2>{%
 				\centering
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
@@ -404,10 +404,10 @@
 					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
 				\end{tikzpicture}%
 			}%
-			\renewcommand{\imwidth}{\columnwidth}
+			\renewcommand{\imagewidth}{\columnwidth}
 			\only<3|handout:3>{%
 				\centering
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
@@ -420,7 +420,7 @@
 				\end{tikzpicture}%
 			}%
 			\only<4|handout:4>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -431,7 +431,7 @@
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -445,7 +445,7 @@
 				\end{tikzpicture}%
 			}%
 			\only<6|handout:5>{%
-				\pgfmathsetlength{\imagewidth}{\imwidth}%
+				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
@@ -475,11 +475,43 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
+% The TOMCAT data is at \\resstore.unibe.ch\ana_rs_schittny\data\Gruppe\AnaTera\AnaTera4\share\SLS\2010a\mrg\
+\begin{frame}[label=current]
 	\frametitle{\uct in der Histologie}
-	\begin{itemize}
-		\item Virtuelle Schnitte in \emph{jeder} Richtung
-	\end{itemize}
+	\begin{columns}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=green, thick}}} % shadowed drawing https://tex.stackexchange.com/a/185853/828
+			\pgfmathsetlength{\imagescale}{\imagewidth/2576}%
+			\def\x{1592}% scalebar-x starting at golden ratio of image width of 2576px = 1592
+			\def\y{1739}% scalebar-y at 90% of image height of 1932px = 1739
+			\def\mag{4}% magnification of inset
+			\def\size{75}% size of inset
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0.tif-corrected.png}};
+				\spy [red] on (2276,1632) in node at (0,0) [anchor=north west];
+				% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500um, 185.185px = 100um
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+			\end{tikzpicture}%
+		\end{column}
+		\begin{column}{0.49\linewidth}
+			\centering
+			\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=green, thick}}} % shadowed drawing https://tex.stackexchange.com/a/185853/828
+			\pgfmathsetlength{\imagescale}{\imagewidth/2936}%
+			\def\x{1814}% scalebar-x starting at golden ratio of image width of 2936px = 1814
+			\def\y{1030}% scalebar-y at 90% of image height of 1145px = 1030
+			\def\mag{4}% magnification of inset
+			\def\size{75}% size of inset
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};
+				\spy [red] on (2636,845) in node at (0,0) [anchor=north west];
+				% 2936.000px = 4.34528mm -> 100px = 148.000um -> 337.838px = 500um, 67.568px = 100um
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+			\end{tikzpicture}%
+		\end{column}
+	\end{columns}
+	\centering
+	Bilder aus \cite{Haberthuer2021a}
 \end{frame}
 
 \begin{frame}
@@ -490,17 +522,17 @@
 	\end{itemize}
 \end{frame}
 
-\renewcommand{\imwidth}{0.618\linewidth}
-\begin{frame}
+\renewcommand{\imagewidth}{0.618\linewidth}
+\begin{frame}[label=current]
 	\frametitle{\uct im Vergleich mit EM}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			\centering
-			\includegraphics[width=\imwidth]{./images/gold-nanoparticles-srxtm}
+			\includegraphics[width=\imagewidth]{./images/gold-nanoparticles-srxtm}
 		\end{column}
 		\begin{column}{0.49\linewidth}
 			\centering
-			\includegraphics[width=\imwidth]{./images/gold-nanoparticles-em}			
+			\includegraphics[width=\imagewidth]{./images/gold-nanoparticles-em}			
 		\end{column}
 	\end{columns}
 	\centering
