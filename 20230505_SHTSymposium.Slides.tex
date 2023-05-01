@@ -471,7 +471,7 @@
 }
 
 \begin{frame}
-	\frametitle{\uct in der Histologie}
+	\frametitle{\uct \leftrightarrow Histologie}
 	\begin{itemize}
 		\item Zerstörungsfrei
 		\item Virtuelle Schnitte in \emph{jeder} Richtung
@@ -479,44 +479,73 @@
 	\end{itemize}
 \end{frame}
 
-% The TOMCAT data is at \\resstore.unibe.ch\ana_rs_schittny\data\Gruppe\AnaTera\AnaTera4\share\SLS\2010a\mrg\
 \begin{frame}[label=current]
-	\frametitle{\uct in der Histologie}
-	\begin{columns}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=green, thick}}} % shadowed drawing https://tex.stackexchange.com/a/185853/828
-			\pgfmathsetlength{\imagescale}{\imagewidth/2576}%
-			\def\x{1592}% scalebar-x starting at golden ratio of image width of 2576px = 1592
-			\def\y{1739}% scalebar-y at 90% of image height of 1932px = 1739
-			\def\mag{4}% magnification of inset
-			\def\size{75}% size of inset
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0.tif-corrected.png}};
-				\spy [red] on (2276,1632) in node at (0,0) [anchor=north west];
-				% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500um, 185.185px = 100um
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-			\end{tikzpicture}%
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=green, thick}}} % shadowed drawing https://tex.stackexchange.com/a/185853/828
-			\pgfmathsetlength{\imagescale}{\imagewidth/2936}%
-			\def\x{1814}% scalebar-x starting at golden ratio of image width of 2936px = 1814
-			\def\y{1030}% scalebar-y at 90% of image height of 1145px = 1030
-			\def\mag{4}% magnification of inset
-			\def\size{75}% size of inset
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};
-				\spy [red] on (2636,845) in node at (0,0) [anchor=north west];
-				% 2936.000px = 4.34528mm -> 100px = 148.000um -> 337.838px = 500um, 67.568px = 100um
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
-			\end{tikzpicture}%
-		\end{column}
-	\end{columns}
-	\centering
-	Bilder aus \cite{Haberthuer2021a}
+	\frametitle{\uct \leftrightarrow Histologie}
+		\begin{columns}
+			\begin{column}{0.49\linewidth}
+				\uct Pro/Contra
+% 				{\color{ubRed}\begin{itemize}
+% 					\item asdf
+% 					\item asdf
+% 				\end{itemize}}
+% 				{\color{ubRedComplementary1}\begin{itemize}
+% 					\item asdf
+% 					\item asdf
+% 				\end{itemize}}				
+% 				{\color{ubRedComplementary2}\begin{itemize}
+% 					\item asdf
+% 					\item asdf
+% 				\end{itemize}}								
+ 			\end{column}
+ 			\begin{column}{0.49\linewidth}
+ 				Histologie Pro/Contra
+% 				\begin{itemize}
+% 					\item[+] \emph{Sehr} standartisiert
+% 					\item[-] Schnitte durch Samples sind \emph{nicht} virtuell
+% 				\begin{end}
+ 			\end{column}
+ 		\end{columns}
 \end{frame}
+
+% % The TOMCAT data is at \\resstore.unibe.ch\ana_rs_schittny\data\Gruppe\AnaTera\AnaTera4\share\SLS\2010a\mrg\
+ \begin{frame}[label=current]
+ 	\frametitle{\uct \leftrightarrow Histologie}
+ 	\only<1>{%
+ 		\begin{columns}
+ 			\begin{column}{0.49\linewidth}
+ 				\centering
+ 				\pgfmathsetlength{\imagescale}{\imagewidth/2576}%
+ 				\def\x{1592}% scalebar-x starting at golden ratio of image width of 2576px = 1592
+ 				\def\y{1739}% scalebar-y at 90% of image height of 1932px = 1739
+ 				\def\mag{4}% magnification of inset
+ 				\def\size{75}% size of inset
+ 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+ 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0.tif-corrected.png}};
+ 					\spy [black] on (827,1241) in node at (2576,966) [anchor=east];
+ 					% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500um, 185.185px = 100um
+ 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+ 				\end{tikzpicture}%
+ 			\end{column}
+ 			\begin{column}{0.49\linewidth}
+ 				\centering
+ 				\pgfmathsetlength{\imagescale}{\imagewidth/2936}%
+ 				\def\x{1814}% scalebar-x starting at golden ratio of image width of 2936px = 1814
+ 				\def\y{1030}% scalebar-y at 90% of image height of 1145px = 1030
+ 				\def\mag{4}% magnification of inset
+ 				\def\size{75}% size of inset
+ 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+ 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};
+ 					\spy [ultra thick,white] on (2296,759) in node at (0,572.5) [anchor=west];
+ 					% 2936.000px = 4.34528mm -> 100px = 148.000um -> 337.838px = 500um, 67.568px = 100um
+ 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+ 				\end{tikzpicture}%
+ 			\end{column}
+ 		\end{columns}
+ 		\centering
+ 		Bilder aus Publikation~\footcite{Haberthuer2021a} mit Eveline Yao
+ 	}%
+ 	\only<2>{Animation}
+ \end{frame}
 
 \begin{frame}
 	\frametitle{\uct in der Histologie}
@@ -526,25 +555,38 @@
 	\end{itemize}
 \end{frame}
 
-\renewcommand{\imagewidth}{0.618\linewidth}
-\begin{frame}[label=current]
-	\frametitle{\uct im Vergleich mit EM}
-	\begin{columns}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\includegraphics[width=\imagewidth]{./images/gold-nanoparticles-srxtm}
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\includegraphics[width=\imagewidth]{./images/gold-nanoparticles-em}			
-		\end{column}
-	\end{columns}
-	\centering
-	Bilder aus \cite{Haberthuer2009}
-\end{frame}			
+ \renewcommand{\imagewidth}{0.618\linewidth}
+ \begin{frame}
+ 	\frametitle{\uct im Vergleich mit EM}
+ 	\begin{columns}
+ 		\begin{column}{0.49\linewidth}
+ 			\centering
+ 			\includegraphics[width=\imagewidth]{./images/gold-nanoparticles-srxtm}
+ 		\end{column}
+ 		\begin{column}{0.49\linewidth}
+ 			\centering
+ 			\includegraphics[width=\imagewidth]{./images/gold-nanoparticles-em}			
+ 		\end{column}
+ 	\end{columns}
+ 	\centering
+ 	Bilder aus \cite{Haberthuer2009}
+ \end{frame}			
 		
 \begin{frame}
 	\frametitle{Adiömersi!}
+	\begin{itemize}
+		\item<1-> \uct macht effiziente und zerstörungsfreie Bildgebung
+		\item<1-> Färbung ist \emph{nicht} möglich, je nachdem aber auch nicht nötig
+		\item<2-> Danke fürs Zuhören!
+		\item<2-> Welche Fragen kann ich beantworten?
+	\end{itemize}
+	\only<3|handout:0>{%
+		\begin{tikzpicture}[remember picture,overlay]%
+			\node at (current page.center){%
+				\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
+				};%
+		\end{tikzpicture}%
+	}%
 \end{frame}
 
 \mode<beamer>{\begin{frame}[shrink=20]}
