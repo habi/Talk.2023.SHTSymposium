@@ -1,0 +1,44 @@
+At frame 0:
+- reset transformation 
+- change channel 1 bounding box min z to 1022
+- change all channels' bounding box x to (0.0, 2936.0)
+- change all channels' bounding box y to (0.0, 1140.0)
+- change all channels' front/back clipping to (-1656.0, 1665.0)
+
+From frame 0 to frame 10 change channel 1 bounding box min z to 0
+
+From frame 10 to frame 20:
+- rotate by -83.0 degrees vertically
+- rotate by 1.0 degrees horizontally
+- zoom by a factor of 0.8
+
+// Recorded transition
+From frame 20 to frame 40:
+- rotate by -22.8 degrees vertically
+- rotate by -3.6 degrees around (0, 0, 1)
+- rotate by 51.3 degrees horizontally
+- zoom by a factor of 1.1
+- translate by (1.2, -0.6, -0.0)
+- change all channels' bounding box x to (0.0, 1590.0)
+- change all channels' bounding box y to (0.0, 1140.0)
+- change all channels' bounding box z to (0.0, 1024.0)
+- change all channels' front/back clipping to (-1656.0, 1665.0)
+// Recorded transition
+From frame 40 to frame 60:
+- rotate by 4.0 degrees vertically
+- rotate by -7.8 degrees around (0, 0, 1)
+- rotate by 28.6 degrees horizontally
+- zoom by a factor of 5.0
+- translate by (-8.3, -3.5, 2.8)
+
+// Recorded transition
+From frame 60 to frame 80:
+- rotate by 131.5 degrees vertically
+- rotate by -79.3 degrees around (0, 0, 1)
+- rotate by 35.3 degrees horizontally
+- zoom by a factor of 0.2
+- translate by (-0.0, -1.0, 1.5)
+- change all channels' bounding box x to (0.0, 2936.0)
+- change all channels' bounding box y to (0.0, 1140.0)
+- change all channels' bounding box z to (1022.0, 1024.0)
+- change all channels' front/back clipping to (-1656.0, 1665.0)
