@@ -1,11 +1,4 @@
 \documentclass[handout,aspectratio=169]{beamer}
 \usepackage{pgfpages}
-\pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm]
-\mode<handout>{%
-	% Add borders: https://texblog.org/2011/07/06/printing-multiple-pages-on-one-with-pgfpages/#comment-5561
-	\pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}
-	\pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}
-	\pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}
-	\pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}
-}
-\input{20230505_SHTSymposium.Slides.tex} 
+\pgfpagesuselayout{resize to}[a4paper,border shrink=5mm,landscape]
+\input{20230505_SHTSymposium.Slides.tex}
