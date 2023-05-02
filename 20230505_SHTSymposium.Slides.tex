@@ -16,7 +16,7 @@
 \newcommand{\imagewidth}{\linewidth}% set global image width
 \newcommand{\imageheight}{0.618\paperheight}% set global image height
 \newlength\imagescale% needed for scalebars
-\newcommand{\uct}{\si{\micro}CT\xspace}% make our life easier
+\newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 
 \usepackage[ngerman]{babel}
 \usepackage[backend=biber,
@@ -334,12 +334,11 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Why \uct?}
+	\frametitle{Wiso braucht es überhaupt \uct-Bildgebung?}
 	\begin{columns}
 		\begin{column}{0.49\linewidth}
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
-				\pgfmathsetlength{\imagewidth}{\imagewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
@@ -350,114 +349,106 @@
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
 				\end{tikzpicture}%
 			}%
-		% 	\only<5|handout:0>{%
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/512}%
-		% 		\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
-		% 		\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-		% 		\def\mag{6}% magnification of inset
-		% 		\def\size{125}% size of inset
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
-		% 			\spy [ubRed] on (58,356) in node at (256,201) [anchor=center];
-		% 			% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\renewcommand{\imagewidth}{0.1554\columnwidth}%
-		% 	\only<6|handout:5>{%
-		% 		\centering
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/512}%
-		% 		\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
-		% 		\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
-		% 			% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
-		% \end{column}%
-		% \begin{column}{0.49\linewidth}
-		% 	\only<1|handout:1>{%
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-		% 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-		% 		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
-		% 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-		% 			%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\renewcommand{\imagewidth}{0.1\columnwidth}%
-		% 	\only<2|handout:2>{%
-		% 		\centering
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/54}%
-		% 		\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
-		% 		\def\y{22}% scalebar-y at 90% of image height of 24px = 22
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
-		% 			% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-		% 			%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
-		% 			%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\renewcommand{\imagewidth}{\columnwidth}
-		% 	\only<3|handout:3>{%
-		% 		\centering
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/54}%
-		% 		\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
-		% 		\def\y{22}% scalebar-y at 90% of image height of 24px = 22
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
-		% 			% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-		% 			%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		% 			%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\only<4|handout:4>{%
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-		% 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-		% 		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
-		% 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\only<5|handout:0>{%
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-		% 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-		% 		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-		% 		\def\mag{6}% magnification of inset
-		% 		\def\size{125}% size of inset
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
-		% 			\spy [ubRed] on (352,1116) in node at (1648,746) [anchor=center];
-		% 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		% 		\end{tikzpicture}%
-		% 	}%
-		% 	\only<6|handout:5>{%
-		% 		\pgfmathsetlength{\imagewidth}{\imagewidth}%
-		% 		\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
-		% 		\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
-		% 		\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-		% 		\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		% 			\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
-		% 			% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-		% 			\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
-		% 		\end{tikzpicture}%
-		% 	}%
+			\only<5|handout:0>{%
+				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
+				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
+				\def\mag{6}% magnification of inset
+				\def\size{125}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
+					\spy [ubRed] on (58,356) in node at (256,201) [anchor=center];
+					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+				\end{tikzpicture}%
+			}%
+			\renewcommand{\imwidth}{0.1554\columnwidth}%
+			\only<6|handout:5>{%
+				\centering
+				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
+				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
+				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
+					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+				\end{tikzpicture}%
+			}%
+			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
+		\end{column}%
+		\begin{column}{0.49\linewidth}
+			\only<1|handout:1>{%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%
+			\renewcommand{\imwidth}{0.1\columnwidth}%
+			\only<2|handout:2>{%
+				\centering
+				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
+				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
+				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
+					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
+				\end{tikzpicture}%
+			}%
+			\renewcommand{\imwidth}{\columnwidth}
+			\only<3|handout:3>{%
+				\centering
+				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
+				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
+				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
+					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
+					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					%\draw[color=red, anchor=south west] (0,24) node [fill=white, semitransparent] {Legend} node {Legend};
+				\end{tikzpicture}%
+			}%
+			\only<4|handout:4>{%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%
+			\only<5|handout:0>{%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\def\mag{6}% magnification of inset
+				\def\size{125}% size of inset
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+					\spy [ubRed] on (352,1116) in node at (1648,746) [anchor=center];
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%
+			\only<6|handout:5>{%
+				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
+				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
+				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -520,11 +511,11 @@
  				\def\size{75}% size of inset
  				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
  					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0_tif-corrected.png}};
- 					\spy [black] on (827,1241) in node at (2576,966) [anchor=east];
+ 					\only<2|handout:0>{\spy [black] on (827,1241) in node at (2576,966) [anchor=east];}
  					% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500um, 185.185px = 100um
- 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+ 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
  				\end{tikzpicture}%
-				% \sourcecite{Haberthuer2021a}{Abbildung 1a}%
+				\sourcecite{Haberthuer2021a}{Abbildung 1a}%
  			\end{column}
  			\begin{column}{0.49\linewidth}
  				\centering
@@ -535,15 +526,15 @@
  				\def\size{75}% size of inset
  				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
  					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};
- 					\spy [ultra thick,white] on (2296,759) in node at (0,572.5) [anchor=west];
+ 					\only<2|handout:0>{\spy [white] on (2296,759) in node at (0,572.5) [anchor=west];}
  					% 2936.000px = 4.34528mm -> 100px = 148.000um -> 337.838px = 500um, 67.568px = 100um
- 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+ 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
  				\end{tikzpicture}%
-				% \sourcecite{Haberthuer2021a}{Abbildung 1e}%
+				\sourcecite{Haberthuer2021a}{Abbildung 1e}%
  			\end{column}
  		\end{columns}
  	}%
-	\only<2>{%
+	\only<3|handout:2>{%
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center){%	
 				\mode<beamer>{%
