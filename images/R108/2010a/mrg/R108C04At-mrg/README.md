@@ -1,0 +1,6 @@
+- I took an old reconstruction from \\resstore.unibe.ch\ana_rs_schittny\data\Gruppe\AnaTera\AnaTera4\share\SLS\2010a\mrg\
+- For easyness reasons only the top part of the stacked scan at TOMCAT
+- Quick and dirty 'connected components' in Fiji on binned dataset, then selected one part of one acinus (#1378, IIRC)
+- Created a composite image of the upscaled again acinus with the orignal data
+- Used `R108C04A.animation.txt` to generate a quick animation and saved this animation to the `animation.frames` directory
+- Ran `rename.ul . _ *.jpg` in the folder for easyness of loading the images in the presentation
