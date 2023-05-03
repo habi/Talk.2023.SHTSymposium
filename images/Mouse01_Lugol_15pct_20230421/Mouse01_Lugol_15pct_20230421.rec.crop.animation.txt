@@ -1,0 +1,65 @@
+At frame 0:
+- reset transformation
+- change all channels' bounding box x to (0.0, 1737.0)
+- change all channels' bounding box y to (0.0, 1365.0)
+- change all channels' bounding box z to (970.0, 972.0)
+- change all channels' front/back clipping to (-1470.363525390625, 1470.363525390625)
+- change channel 1 intensity to (1.0, 255.0, 1.0)
+- change channel 1 alpha to (1.0, 52.0, 2.0)
+- change channel 1 color to (255.0, 255.0, 255.0)
+- change channel 1 lookup table to fixed channel color
+- change channel 1 light to (1.0, 0.0, 0.0, 5.0)
+- change channel 1 lighting to off
+- change channel 1 weight to 1.0
+- change rendering algorithm to independent transparency
+- change background color to (0.0, 0.0, 0.0)
+
+From frame 0 to frame 5 change background color to white 
+
+From frame 0 to frame 20:
+- rotate by 98.4 degrees vertically
+- rotate by -3.8 degrees around (0, 0, 1)
+- rotate by -152.0 degrees horizontally
+- zoom by a factor of 0.8
+- translate by (-26.8, -33.6, -0.0)
+- change channel 1 bounding box z to (0, 1941)
+- change channel 1 intensity to (27.0, 159.0, 1.0)
+- change channel 1 alpha to (39.0, 108.0, 2.0)
+- change channel 1 color to (255.0, 255.0, 255.0)
+
+// Recorded transition
+From frame 20 to frame 40:
+- rotate by -9.2 degrees vertically
+- rotate by -17.4 degrees around (0, 0, 1)
+- rotate by -41.7 degrees horizontally
+- zoom by a factor of 1.4
+- translate by (160.0, 126.1, 28.2)
+- change channel 1 lookup table to fixed channel color
+- change channel 1 light to (1.0, 0.0, 0.0, 5.0)
+- change channel 1 lighting to off
+- change channel 1 weight to 1.0
+- change rendering algorithm to independent transparency
+- change background color to (255.0, 255.0, 255.0)
+- change all channels' bounding box x to (0.0, 1737.0)
+- change all channels' bounding box y to (0.0, 245.0)
+- change all channels' bounding box z to (0.0, 1941.0)
+- change all channels' front/back clipping to (-1470.363525390625, 1470.363525390625)
+
+// Recorded transition
+From frame 40 to frame 60:
+- rotate by 97.9 degrees vertically
+- rotate by 10.0 degrees around (0, 0, 1)
+- rotate by 162.7 degrees horizontally
+- zoom by a factor of 0.9
+- translate by (76.5, -6.3, 109.9)
+- change all channels' bounding box x to (0.0, 1737.0)
+- change all channels' bounding box y to (0.0, 1365.0)
+- change all channels' bounding box z to (0.0, 1941.0)
+- change all channels' front/back clipping to (-1470.363525390625, 1470.363525390625)
+
+From frame 60 to frame 80:
+- change background color to (0, 0, 0)
+- change channel 1 bounding box z to (970.0, 972.0)
+- change channel 1 intensity to (1.0, 255.0, 1.0)
+- change channel 1 alpha to (1.0, 52, 2.0)
+- change channel 1 color to (255.0, 255.0, 255.0)
