@@ -85,11 +85,11 @@
 			}%
 		}%
 	}%
-\newcommand{\sourcelink}[3]{%
+\newcommand{\sourcelink}[2]{%
 	% Make the source command an \href{link}{text}
 	\raisebox{-1.618ex}{%
 		\makebox[0pt][r]{%
-			\tiny\href{http://#1}{#2}, #3%
+			\tiny\href{http://#1}{#2}%
 			}%
 		}%
 	}%
@@ -684,40 +684,48 @@
 	}%
 	\only<3>{%
 		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%	
+			\node at (current page.center){%
 				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{201}{420}%
 			};%
 		\end{tikzpicture}%
 	}%
 	\only<4>{%
 		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%	
+			\node at (current page.center){%
 				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{421}{677}%
 			};%
 		\end{tikzpicture}%
-	}%	
+	}%
 	\only<4>{%
 		\begin{tikzpicture}[remember picture,overlay]%
-			\node at (current page.center){%	
+			\node at (current page.center){%
 				\animategraphics[loop,autoplay,width=\linewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{678}{900}%
 			};%
 		\end{tikzpicture}%
 	}%
 \end{frame}
 
-\renewcommand{\imagewidth}{0.4\linewidth}
-\begin{frame}
-	\frametitle{\uct in der digitalen Pathologie}
-	\centering%
-	\pgfmathsetlength{\imagescale}{\imagewidth/3296}%
-	\def\x{2037}% scalebar-x starting at golden ratio of image width of 3296px = 2037
-	\def\y{2966}% scalebar-y at 90% of image height of 3296px = 2966
-	\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-		\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/DigitalPathology/10543_1mm_Vert_04um_CCD_nof_60kV/rec/10543_1mm_Vert_04um_CCD_nof_60kV_rec00001241}};
-		% 3296.000px = 1.3184mm -> 100px = 40.000um -> 1250.000px = 500um, 250.000px = 100um
- 		%\draw[|-|,blue,thick] (0,1648) -- (3296,1648) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{1.3184}{\milli\meter} (3296px) TEMPORARY!};
-		\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+625,\y) node [midway,above] {\shadowtext{\SI{250}{\micro\meter}}};
-	\end{tikzpicture}%	
+\renewcommand{\imagewidth}{0.4\linewidth}%
+\begin{frame}%
+	\frametitle{\uct in der digitalen Pathologie}%
+	\begin{columns}%
+		\begin{column}{0.49\linewidth}%
+			\includegraphics[height=\imageheight]{./images/Amjad_B08_10543_III_F_HE_7.9x.png}%
+			\sourcelink{https://www.igmp.unibe.ch/about_us/personen/khan_amjad/}{Amjad Khan}%
+		\end{column}%
+		\begin{column}{0.49\linewidth}%
+			\centering%
+			\pgfmathsetlength{\imagescale}{\imagewidth/3296}%
+			\def\x{2037}% scalebar-x starting at golden ratio of image width of 3296px = 2037
+			\def\y{2966}% scalebar-y at 90% of image height of 3296px = 2966
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/DigitalPathology/10543_1mm_Vert_04um_CCD_nof_60kV/rec/10543_1mm_Vert_04um_CCD_nof_60kV_rec00001241}};
+				% 3296.000px = 1.3184mm -> 100px = 40.000um -> 1250.000px = 500um, 250.000px = 100um
+				%\draw[|-|,blue,thick] (0,1648) -- (3296,1648) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{1.3184}{\milli\meter} (3296px) TEMPORARY!};
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+625,\y) node [midway,above] {\shadowtext{\SI{250}{\micro\meter}}};
+			\end{tikzpicture}%
+		\end{column}
+	\end{columns}%
 \end{frame}
 
 \renewcommand{\imagewidth}{0.618\linewidth}
