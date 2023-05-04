@@ -506,7 +506,7 @@
 				\def\y{1747}% scalebar-y at 90% of image height of 1941px = 1747
 				%https://tex.stackexchange.com/a/12643/828
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]								
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Sagittal}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_Middle_Sagittal}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
 					\shadowcolor{ubRedComplementary1}%
@@ -527,7 +527,7 @@
 			\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
 			\def\y{1750}% scalebar-y at 90% of image height of 1944px = 1750
 			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Axial}};
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_Middle_Axial}};
 				% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 				%\draw[|-|,blue,thick] (0,972) -- (1944,972) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
 				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
@@ -554,7 +554,7 @@
 				\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
 				\def\y{1747}% scalebar-y at 90% of image height of 1941px = 1747
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Coronal}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_Middle_Coronal}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
 					\shadowcolor{ubRedComplementary2}%
@@ -572,6 +572,59 @@
 \end{frame}
 \shadowcolor{ubRed}
  
+\begin{frame}[label=current]
+	\frametitle{\uct in der Histologie}
+	\begin{columns}
+		\begin{column}{0.33\linewidth}%
+			\only<1|handout:1>{%
+				\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRedComplementary1}}}%
+				\pgfmathsetlength{\imagescale}{\imagewidth/1944}%
+				\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
+				\def\y{1747}% scalebar-y at 90% of image height of 1941px = 1747
+				%https://tex.stackexchange.com/a/12643/828
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]								
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Sagittal}};
+					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
+					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}
+		\end{column}%
+		\begin{column}{0.33\linewidth}%
+			\only<1|handout:1>{%
+			\pgfmathsetlength{\imagescale}{\imagewidth/1944}%
+			\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
+			\def\y{1750}% scalebar-y at 90% of image height of 1944px = 1750
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Axial}};
+				% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
+				%\draw[|-|,blue,thick] (0,972) -- (1944,972) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+			\end{tikzpicture}%
+			}%
+			\only<2|handout:0>{%
+				\mode<beamer>{\animategraphics[loop,autoplay,width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{000}{080}}%
+				\mode<handout>{\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0019}}%
+			}%
+		\end{column}%	
+		\begin{column}{0.33\linewidth}%
+			\only<1|handout:1>{%
+				\pgfmathsetlength{\imagescale}{\imagewidth/1944}%
+				\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRedComplementary2}}}%
+				\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
+				\def\y{1747}% scalebar-y at 90% of image height of 1941px = 1747
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Coronal}};
+					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
+					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
+					\shadowcolor{ubRedComplementary2}%
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\end{tikzpicture}%
+			}%
+		\end{column}%				
+	\end{columns}%	
+\end{frame}
+
  \renewcommand{\imagewidth}{0.4\linewidth}
  \begin{frame}
  	\frametitle{\uct in der digitalen Pathologie}
