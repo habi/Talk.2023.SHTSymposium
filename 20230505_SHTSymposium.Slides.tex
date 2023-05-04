@@ -410,7 +410,7 @@
  	\begin{columns}%
 		\begin{column}{0.49\linewidth}
 			\centering
-			Histologie Pro\only<2>{/\color{ubRed}{Contra}}
+			Histologie Pro\only<2->{/\color{ubRed}{Contra}}
  				\begin{itemize}
  					\item \emph{Sehr} standartisiert
 					\item Färbung, dadurch \emph{sehr} gute Abgrenzung verschiedener Gewebe
@@ -427,7 +427,7 @@
 				\item<3-> Zerstörungsfrei, virtuelle Schnitte in \emph{jeder} Richtung, komplett 3D
 				\item<3-> \emph{Richtige} Histologie danach immer noch möglich
 				\item<3-> Histologische Analysemethoden (z.B. Stereologie) mit Tomographie\-daten
-				\item<4> \color{ubRed}{Differenzierung \emph{nur} über Röntgen\-dichte}				
+				\item<4> \color{ubRed}{Differenzierung \emph{nur} über Röntgen\-dichte}
 				\item<4> \color{ubRed}{Kosten}
 				\item<4> \color{ubRed}{\emph{Grosse} Datenmengen}
 			\end{itemize}
@@ -523,6 +523,7 @@
 					}%
 				\only<6|handout:1>{%
 					\draw[ubRedComplementary1] (970,0) -- (970,1944);
+					\draw[ubRedComplementary1] (970,0) -- (970,1944);
 					}%
 			\end{tikzpicture}%
 			}%
@@ -543,6 +544,7 @@
 						\draw[ubRed] (0,970) -- (1944,970);
 						}%
 					\only<6|handout:1>{%
+						\draw[ubRed] (0,970) -- (1944,970);
 						\draw[ubRedComplementary1] (970,0) -- (970,1944);
 						}%
 				\end{tikzpicture}%
@@ -615,7 +617,7 @@
 % The TOMCAT data is at \\resstore.unibe.ch\ana_rs_schittny\data\Gruppe\AnaTera\AnaTera4\share\SLS\2010a\mrg\
 \begin{frame}
 	\frametitle{Direktvergleich Histologie \(\leftrightarrow\) \uct}
-	\only<1>{%
+	\only<1-2>{%
 		\begin{columns}%
 			\begin{column}{0.49\linewidth}%
 				\centering%
@@ -649,7 +651,7 @@
 			\end{column}%
 		\end{columns}%
 	}%
-	\renewcommand{\imagewidth}{\linewidth}%	
+	\renewcommand{\imagewidth}{\linewidth}%
 	\only<3|handout:1>{%
 			\centering%
 			\mode<beamer>{%
@@ -662,7 +664,7 @@
 	\only<4|handout:0>{%
 		\centering%
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{201}{420}%
-			};%
+	}%
 	\only<5|handout:0>{%
 		\centering%
 		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{421}{677}%
@@ -673,7 +675,7 @@
 	}%
 \end{frame}
 
-\renewcommand{\imagewidth}{0.618\linewidth}%	
+\renewcommand{\imagewidth}{0.618\paperheight}%
 \begin{frame}%
 	\frametitle{\uct in der digitalen Pathologie}%
 	\begin{columns}%
