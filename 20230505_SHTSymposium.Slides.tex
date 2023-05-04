@@ -21,6 +21,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[backend=biber,
 	style=numeric,
+	backref=true,
 	url=false,
 	maxnames=1,
 	sorting=none]{biblatex}
@@ -164,6 +165,15 @@
 		\usebibmacro{postnote}%
 	}%
 
+% Needed for non-flashing movies: https://tex.stackexchange.com/a/649450/828
+\def\zeropad#1#2{%
+  \ifnum1#2<1#1
+    \zeropad{#1}{0#2}%
+  \else%
+    #2%
+  \fi%
+}
+
 % Move the text down a bit
 % THIS IS A BIG HACK, IT SHOULD BE FIXED IN THE TEMPLATE
 \addtobeamertemplate{frametitle}{}{\vspace*{0.75em}}
@@ -180,44 +190,43 @@
 
 \section{Vorspann}
 \begin{frame}
-	\frametitle{Grüessech mitenang!}
-	\begin{itemize}
-		\item David Haberthür
-		\begin{itemize}
-			\item Physiker
-			\item \href{https://boris.unibe.ch/2619/}{Doktorarbeit: Höchstaufgelöste tomographische Bildgebung in der Lunge} am Institut für Anatomie der Universität Bern
-			\item Post-Doc I: Tomographische Bildgebung von Allerlei an \href{https://www.psi.ch/sls/tomcat/}{TOMCAT} am \href{https://www.psi.ch/}{Paul Scherrer Institut}
-			  und Mitarbeit am \href{http://globaldiagnostix.org}{GlobalDiagnostiX}-Projekt
-			\item Post-Doc II \& Gegenwart: Tomographische Bildgebung von biomedizinischen Dingen in der \href{https://www.ana.unibe.ch/forschung/mikroct/research/}{\uct-Gruppe} am Institut für Anatomie der Universität Bern
-		\end{itemize}
-	\end{itemize}
+	\frametitle{Grüessech mitenang!}%
+	\begin{itemize}%
+		\item David Haberthür%
+		\begin{itemize}%
+			\item Physiker%
+			\item \href{https://boris.unibe.ch/2619/}{Doktorarbeit: Höchstaufgelöste tomographische Bildgebung in der Lunge} am Institut für Anatomie der Universität Bern%
+			\item Post-Doc I: Tomographische Bildgebung von Allerlei an \href{https://www.psi.ch/sls/tomcat/}{TOMCAT} am \href{https://www.psi.ch/}{Paul Scherrer Institut} und Mitarbeit am \href{http://globaldiagnostix.org}{GlobalDiagnostiX}-Projekt%
+			\item Post-Doc II \& Gegenwart: Tomographische Bildgebung von biomedizinischen Dingen in der \href{https://www.ana.unibe.ch/forschung/mikroct/research/}{\uct-Gruppe} am Institut für Anatomie der Universität Bern%
+		\end{itemize}%
+	\end{itemize}%
 \end{frame}
 
 \begin{frame}
-	\frametitle{\uct-Gruppe}
+	\frametitle{\uct-Gruppe}%
 	\begin{columns}%
-		\begin{column}{0.61\linewidth}
-			\begin{itemize}
-				\item microangioCT~\cite{Hlushchuk2018}
-				\begin{itemize}
-					\item Angiogenese: Herz, Muskulatur~\cite{Nording2021} und Knochen
-					\item Gefässe: (Mäuse) Gehirn~\cite{Hlushchuk2020}, (humane) Nerven~\cite{Wuthrich2020}, (human) Hautgewebe~\cite{Zubler2021} und Tumore
-				\end{itemize}
-				\item Muskulatur und Kiemen von Zebrafischen~\cite{MesserliAaldijk2020}
-				\item Erkennung und Klassierung von Tumoren und Metastasen~\cite{Trappetti2021}
-				\item Zusammenarbeit mit NMBE~\cite{Bochud2021}, ZMK~\cite{Haberthuer2021} und Wissenschaftler:innen der Uni Bern~\cite{Halm2021,Haberthuer2023}
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.37\linewidth}
-			\centering
+		\begin{column}{0.61\linewidth}%
+			\begin{itemize}%
+				\item microangioCT~\cite{Hlushchuk2018}%
+				\begin{itemize}%
+					\item Angiogenese: Herz, Muskulatur~\cite{Nording2021} und Knochen%
+					\item Gefässe: (Mäuse) Gehirn~\cite{Hlushchuk2020}, (humane) Nerven~\cite{Wuthrich2020}, (human) Hautgewebe~\cite{Zubler2021} und Tumore%
+				\end{itemize}%
+				\item Muskulatur und Kiemen von Zebrafischen~\cite{MesserliAaldijk2020}%
+				\item Erkennung und Klassierung von Tumoren und Metastasen~\cite{Trappetti2021}%
+				\item Zusammenarbeit mit NMBE~\cite{Bochud2021}, ZMK~\cite{Haberthuer2021} und Wissenschaftler:innen der Uni Bern~\cite{Halm2021,Haberthuer2023}%
+			\end{itemize}%
+		\end{column}%
+		\begin{column}{0.37\linewidth}%
+			\centering%
 			\includegraphics<1|handout:0>[width=\imagewidth]{./images/1172}%
-			\only<1|handout:0>{\source{brukersupport.com}{}}
+			\only<1|handout:0>{\source{brukersupport.com}{}}%
 			\includegraphics<2>[width=\imagewidth]{./images/1272}%
-			\only<2>{\source{bruker.com/skyscan1272}{}}
+			\only<2>{\source{bruker.com/skyscan1272}{}}%
 			\includegraphics<3|handout:0>[width=\imagewidth]{./images/2214}%
-			\only<3|handout:0>{\source{bruker.com/skyscan2214}{}}
-		\end{column}
-	\end{columns}
+			\only<3|handout:0>{\source{bruker.com/skyscan2214}{}}%
+		\end{column}%
+	\end{columns}%
 \end{frame}
 
 \section{Computertomographie}
@@ -251,48 +260,48 @@
 
 \section{(Mikro-)Tomographie}
 \begin{frame}
-	\frametitle{Computertomographie}
-	\centering
+	\frametitle{Computertomographie}%
+	\centering%
 	\mode<beamer>{%
 		\animategraphics[height=\imageheight,every=\everyframe]{24}{./movies/ct-scanner/ct-scanner0}{001}{480}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
-		}
+	}%
 	\mode<handout>{%
 		\includegraphics[height=\imageheight]{./movies/ct-scanner/ct-scanner0001}%
 		\source{youtu.be/2CWpZKuy-NE}{}%
-		}
+	}%
 \end{frame}
 
 \begin{frame}
-	\frametitle{\uct}
+	\frametitle{\uct}%
 	\begin{columns}%
-		\begin{column}{0.49\linewidth}
-			\centering
-			\input{animations/classicCT}
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering
+		\begin{column}{0.49\linewidth}%
+			\centering%
+			\input{animations/classicCT}%
+		\end{column}%
+		\begin{column}{0.49\linewidth}%
+			\centering%
 			\only<1>{\input{animations/microCT}}%
 			\only<2|handout:0>{\input{animations/microCT_lr}}%
 			\only<3|handout:0>{\input{animations/microCT_hr}}%
-		\end{column}
-	\end{columns}
+		\end{column}%
+	\end{columns}%
 \end{frame}
 
 \begin{frame}
-	\frametitle{Wieso braucht es überhaupt \uct-Bildgebung?}
+	\frametitle{Wieso braucht es überhaupt \uct-Bildgebung?}%
 	\begin{columns}%
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.49\linewidth}%
 			% https://www.cancerimagingarchive.net/nbia-search/?saved-cart=nbia-76761575299081509
 			\only<1-4|handout:1-4>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};%
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					%\draw[|-|,blue,thick] (0,200) -- (512,200) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{250.0096}{\milli\meter} (512px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
@@ -301,73 +310,73 @@
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
 				\def\mag{6}% magnification of inset
 				\def\size{125}% size of inset
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
-					\spy [ubRed] on (58,356) in node at (256,201) [anchor=center];
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};%
+					\spy [ubRed] on (58,356) in node at (256,201) [anchor=center];%
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
 				\end{tikzpicture}%
 			}%
 			\renewcommand{\imagewidth}{0.1554\columnwidth}%
 			\only<6|handout:5>{%
-				\centering
+				\centering%
 				\pgfmathsetlength{\imagescale}{\imagewidth/512}%
 				\def\x{316}% scalebar-x starting at golden ratio of image width of 512px = 316
 				\def\y{361}% scalebar-y at 90% of image height of 401px = 361
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_human}};%
 					% 512.000px = 250.0096mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
 				\end{tikzpicture}%
 			}%
-			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}
+			\sourcecite{Clark2013}{Subject \emph{C3L-02465}}%
 		\end{column}%
-		\begin{column}{0.49\linewidth}
+		\begin{column}{0.49\linewidth}%
 			\only<1|handout:1>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};%
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
 					%\draw[|-|,blue,thick] (0,746) -- (3295,746) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.2282}{\milli\meter} (3295px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};%
 				\end{tikzpicture}%
 			}%
 			\renewcommand{\imagewidth}{0.1\columnwidth}%
 			\only<2|handout:2>{%
-				\centering
+				\centering%
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};%
 					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+102.4,\y) node [midway,above] {\shadowtext{\SI{5}{\centi\meter}}};%
 				\end{tikzpicture}%
 			}%
-			\renewcommand{\imagewidth}{\columnwidth}
+			\renewcommand{\imagewidth}{\columnwidth}%
 			\only<3|handout:3>{%
-				\centering
+				\centering%
 				\pgfmathsetlength{\imagescale}{\imagewidth/54}%
 				\def\x{33}% scalebar-x starting at golden ratio of image width of 54px = 33
 				\def\y{22}% scalebar-y at 90% of image height of 24px = 22
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse_488umppx}};%
 					% 54.000px = 26.3682mm -> 100px = 48830.000um -> 1.024px = 500um, 0.205px = 100um
 					%\draw[|-|,blue,thick] (0,12) -- (54,12) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{26.3682}{\milli\meter} (54px) TEMPORARY!};
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+10.24,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};%
 				\end{tikzpicture}%
 			}%
 			\only<4|handout:4>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};%
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};%
 				\end{tikzpicture}%
 			}%
 			\only<5|handout:0>{%
@@ -376,25 +385,25 @@
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
 				\def\mag{6}% magnification of inset
 				\def\size{125}% size of inset
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
-					\spy [ubRed] on (352,1116) in node at (1648,746) [anchor=center];
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};%
+					\spy [ubRed] on (352,1116) in node at (1648,746) [anchor=center];%
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};%
 				\end{tikzpicture}%
 			}%
 			\only<6|handout:5>{%
 				\pgfmathsetlength{\imagescale}{\imagewidth/3295}%
 				\def\x{2036}% scalebar-x starting at golden ratio of image width of 3295px = 2036
 				\def\y{1343}% scalebar-y at 90% of image height of 1492px = 1343
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/comparison/MAX_mouse}};%
 					% 3295.000px = 26.2282mm -> 100px = 796.000um -> 62.814px = 500um, 12.563px = 100um
-					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+628.14,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};%
 				\end{tikzpicture}%
 			}%
-		\end{column}
-	\end{columns}
+		\end{column}%
+	\end{columns}%
 \end{frame}
 \note{The human head scan was downloaded from the \href{https://www.cancerimagingarchive.net}{Cancer Imaging Archive}.
 	We loaded the DICOM slices in Fiji, resliced it to show it from the side and then used to generate an MIP.
@@ -404,7 +413,7 @@
 	The voxel size of the original data is 7.96 um, the image size is 3295\(\times\)1492 pixels.
  }
 
-\section{Histologie \(\leftrightarrow\) \uct}
+\section{Vergleich Histologie und \uct}
 \begin{frame}
  	\frametitle{Histologie \(\leftrightarrow\) \uct}
  	\begin{columns}%
@@ -412,7 +421,7 @@
 			\centering
 			Histologie Pro\only<2->{/\color{ubRed}{Contra}}
  				\begin{itemize}
- 					\item \emph{Sehr} standartisiert
+ 					\item \emph{Sehr} standardisiert
 					\item Färbung, dadurch \emph{sehr} gute Abgrenzung verschiedener Gewebe
 					\item Bildgebung einfach und kostengünstig
 					\item<2-> \color{ubRed}{Limitiertes Sichtfeld}
@@ -523,7 +532,7 @@
 					}%
 				\only<6|handout:1>{%
 					\draw[ubRedComplementary1] (970,0) -- (970,1944);
-					\draw[ubRedComplementary1] (970,0) -- (970,1944);
+					\draw[ubRedComplementary2] (0,970) -- (1944,970);
 					}%
 			\end{tikzpicture}%
 			}%
@@ -569,7 +578,7 @@
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
 					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
-			}
+			}%
 		\end{column}%
 		\begin{column}{0.35\linewidth}%
 			\only<1|handout:1>{%
@@ -585,17 +594,32 @@
 				}%
 			\only<2|handout:2>{%
 				\mode<beamer>{%
-					\animategraphics[width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{000}{240}%from slice to full view
+					\begin{animateinline}[every=\everyframe]{24}% Avoid flashing frames: https://tex.stackexchange.com/a/649450/828
+      						\multiframe{240}{i=0+1}{\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame\zeropad{0000}{\i}}}%
+			      			\newframe*
+     						\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0240}% last frame needs to be repeated
+			    		\end{animateinline}				
+					%\animategraphics[width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{000}{240}%from slice to full view
 					}%
 				\mode<handout>{%
 					\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0240}%show only full view
 					}%
 				}%
 			\only<3|handout:0>{%
-				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{241}{480}%rotate once, show crop of back muscles
+				\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      					\multiframe{240}{i=240+1}{\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame\zeropad{0000}{\i}}}%
+		      			\newframe*
+     					\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0480}% last frame needs to be repeated
+			    	\end{animateinline}				
+				%\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{241}{480}%rotate once, show crop of back muscles
 				}%
 			\only<4|handout:0>{%
-				\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{481}{720}%go back to start
+				\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      					\multiframe{240}{i=480+1}{\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame\zeropad{0000}{\i}}}%
+		      			\newframe*
+     					\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0720}% last frame needs to be repeated
+		    		\end{animateinline}				
+				%\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/Mouse01_Lugol_15pct_20230421/animation_frames/frame0}{481}{720}%go back to start
 				}%
 		\end{column}%
 		\begin{column}{0.35\linewidth}%
@@ -616,7 +640,7 @@
 
 % The TOMCAT data is at \\resstore.unibe.ch\ana_rs_schittny\data\Gruppe\AnaTera\AnaTera4\share\SLS\2010a\mrg\
 \begin{frame}
-	\frametitle{Direktvergleich Histologie \(\leftrightarrow\) \uct}
+	\frametitle{Direktvergleich Histologie \(\leftrightarrow\) \uct}%
 	\only<1-2>{%
 		\begin{columns}%
 			\begin{column}{0.49\linewidth}%
@@ -626,11 +650,11 @@
 				\def\y{1739}% scalebar-y at 90% of image height of 1932px = 1739
 				\def\mag{4}% magnification of inset
 				\def\size{75}% size of inset
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0_tif-corrected.png}};
-					\only<2|handout:0>{\spy [black] on (827,1241) in node at (2576,966) [anchor=east];}
-					% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500um, 185.185px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0_tif-corrected.png}};%
+					\only<2|handout:0>{\spy [black] on (732,936) in node at (2576,966) [anchor=east];}%
+					% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500 um, 185.185px = 100um
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
 				\end{tikzpicture}%
 				\sourcecite{Haberthuer2021a}{Abbildung 1a}%
 			\end{column}%
@@ -641,11 +665,11 @@
 				\def\y{1030}% scalebar-y at 90% of image height of 1145px = 1030
 				\def\mag{4}% magnification of insetxx
 				\def\size{75}% size of inset
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};
-					\only<2|handout:0>{\spy [ultra thick,white] on (2296,759) in node at (0,572.5) [anchor=west];}
+				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]%
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};%
+					\only<2|handout:0>{\spy [ultra thick,white] on (1635,318) in node at (0,572.5) [anchor=west];}%
 					% 2936.000px = 4.34528mm -> 100px = 148.000um -> 337.838px = 500um, 67.568px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};
+					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
 				\end{tikzpicture}%
 				\sourcecite{Haberthuer2021a}{Abbildung 1e}%
 			\end{column}%
@@ -655,7 +679,12 @@
 	\only<3|handout:1>{%
 			\centering%
 			\mode<beamer>{%
-				\animategraphics[width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{000}{200}%
+				\begin{animateinline}[every=\everyframe]{24}% Avoid flashing frames: https://tex.stackexchange.com/a/649450/828
+      					\multiframe{200}{i=0+1}{\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame\zeropad{0000}{\i}}}%
+      					\newframe*
+		     			\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0200}% last frame needs to be repeated
+    				\end{animateinline}
+				%\animategraphics[width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{000}{200}%
 			}%
 			\mode<handout>{%
 				\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0420}%
@@ -663,16 +692,52 @@
 	}%
 	\only<4|handout:0>{%
 		\centering%
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{201}{420}%
+		\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      			\multiframe{220}{i=200+1}{\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame\zeropad{0000}{\i}}}%
+      			\newframe*
+     			\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0420}% last frame needs to be repeated
+    		\end{animateinline}
+		%\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{0}{201}{420}%
 	}%
 	\only<5|handout:0>{%
 		\centering%
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{421}{677}%
+		\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      			\multiframe{256}{i=421+1}{\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame\zeropad{0000}{\i}}}%
+      			\newframe*
+     			\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0677}% last frame needs to be repeated
+    		\end{animateinline}		
+		%\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{421}{677}%
 	}%
 	\only<6|handout:0>{%
 		\centering%
-		\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{678}{900}%
+		\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      			\multiframe{222}{i=678+1}{\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame\zeropad{0000}{\i}}}%
+      			\newframe*
+     			\includegraphics[width=\imagewidth]{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0900}% last frame needs to be repeated
+    		\end{animateinline}		
+		%\animategraphics[autoplay,width=\imagewidth,every=\everyframe]{24}{./images/R108/2010a/mrg/R108C04At-mrg/animation_frames/frame0}{678}{900}%
 	}%
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hoof}
+    \only<1>{%
+    \begin{animateinline}[autoplay]{24}
+      \multiframe{151}{i=0+1}{\includegraphics[height=\imheight]{video-\zeropad{0000}{\i}}}%
+      \newframe*
+      \includegraphics[height=\imheight]{video-0150} % last frame needs to be repeated
+    \end{animateinline}
+    }%
+    \only<2>{%
+    \begin{animateinline}[autoplay]{24}
+      \multiframe{22}{i=150+1}{\includegraphics[height=\imheight]{video-\zeropad{0000}{\i}}}%
+      \newframe* 
+      \includegraphics[height=\imheight]{video-0171} % last frame needs to be repeated
+    \end{animateinline}
+    }%
+    \only<3>{%
+    \animategraphics[autoplay,height=\imheight]{24}{video-}{0171}{0300}%
+    }%
 \end{frame}
 
 \renewcommand{\imagewidth}{0.618\paperheight}%
@@ -689,43 +754,43 @@
 			\pgfmathsetlength{\imagescale}{\imagewidth/3296}%
 			\def\x{2037}% scalebar-x starting at golden ratio of image width of 3296px = 2037
 			\def\y{2966}% scalebar-y at 90% of image height of 3296px = 2966
-			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/DigitalPathology/10543_1mm_Vert_04um_CCD_nof_60kV/rec/10543_1mm_Vert_04um_CCD_nof_60kV_rec00001241}};
+			\begin{tikzpicture}[x=\imagescale,y=-\imagescale]%
+				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/DigitalPathology/10543_1mm_Vert_04um_CCD_nof_60kV/rec/10543_1mm_Vert_04um_CCD_nof_60kV_rec00001241}};%
 				% 3296.000px = 1.3184mm -> 100px = 40.000um -> 1250.000px = 500um, 250.000px = 100um
 				%\draw[|-|,blue,thick] (0,1648) -- (3296,1648) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{1.3184}{\milli\meter} (3296px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+625,\y) node [midway,above] {\shadowtext{\SI{250}{\micro\meter}}};
+				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+625,\y) node [midway,above] {\shadowtext{\SI{250}{\micro\meter}}};%
 			\end{tikzpicture}%
 			\sourcelink{https://www.anatomie.unibe.ch/ueber_uns/team/detail/index_ger.php?id=487}{Oleksiy Khoma}%
-		\end{column}
+		\end{column}%
 	\end{columns}%
 \end{frame}
 
 \begin{frame}
-	\frametitle{\uct im Vergleich mit EM}
+	\frametitle{\uct im Vergleich mit EM}%
 	\begin{columns}%
-		\begin{column}{0.49\linewidth}
-			\centering
-			\includegraphics[height=\imageheight]{./images/gold-nanoparticles-srxtm}
-			\sourcecite{Haberthuer2009}{Abbildung 1b}
-		\end{column}
-		\begin{column}{0.49\linewidth}
-			\centering
-			\includegraphics[height=\imageheight]{./images/gold-nanoparticles-em}
-			\sourcecite{Haberthuer2009}{Abbildung 1c}
-		\end{column}
-	\end{columns}
+		\begin{column}{0.49\linewidth}%
+			\centering%
+			\includegraphics[height=\imageheight]{./images/gold-nanoparticles-srxtm}%
+			\sourcecite{Haberthuer2009}{Abbildung 1b}%
+		\end{column}%
+		\begin{column}{0.49\linewidth}%
+			\centering%
+			\includegraphics[height=\imageheight]{./images/gold-nanoparticles-em}%
+			\sourcecite{Haberthuer2009}{Abbildung 1c}%
+		\end{column}%
+	\end{columns}%
 \end{frame}
 
 \section{Abspann}
-\begin{frame}
-	\frametitle{Adiömersi!}
-	\begin{itemize}
-		\item<1-> \uct macht effiziente und zerstörungsfreie Bildgebung in 3D
-		\item<1-> Auflösung von \uct-Daten erreichen histologische Standardmethoden
-		\item<1-> Klassische Färbung ist \emph{nicht} möglich, je nachdem aber auch nicht nötig
-		\item<2-> Danke fürs Zuhören!
-		\item<2-> Welche Fragen kann ich beantworten?
-	\end{itemize}
+\begin{frame}%
+	\frametitle{Adiömersi!}%
+	\begin{itemize}%
+		\item<1-> \uct macht effiziente und zerstörungsfreie Bildgebung in drei Dimensionen%
+		\item<1-> Auflösung von \uct-Daten erreichen histologische Standardmethoden%
+		\item<1-> Gewebedifferenzierung durch klassische Färbung ist \emph{nicht} möglich (je nachdem aber auch nicht nötig)%
+		\item<2-> Danke fürs Zuhören!%
+		\item<2-> Welche Fragen kann ich beantworten?%
+	\end{itemize}%
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center){%
