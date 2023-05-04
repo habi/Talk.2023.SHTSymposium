@@ -249,9 +249,16 @@
 			\only<3|handout:2>{%
 				\begin{tikzpicture}[remember picture,overlay]%
 					\node at (current page.center){%
-						\mode<beamer>{\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}}%
-						\mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}
-					};%
+						\mode<beamer>{%
+							\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      								\multiframe{236}{i=0+1}{\includegraphics[width=\imagewidth]{./movies/mouse_skull/mouse_skull\zeropad{000}{\i}}}%
+	      							\newframe*
+    								\includegraphics[width=\imagewidth]{./movies/mouse_skull/mouse_skull236}% last frame needs to be repeated
+		    					\end{animateinline}				
+							%\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}
+						}%
+						\mode<handout>{\includegraphics[width=\paperwidth]{./movies/mouse_skull/mouse_skull075}}%
+						};%
 				\end{tikzpicture}%
 			}%
 		\end{column}%
@@ -448,7 +455,6 @@
 	\frametitle{Röntgenbilder}
 	\begin{columns}%
 		\begin{column}{0.35\linewidth}%
-				\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRedComplementary1}}}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/1944}%
 				\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
 				\def\y{1747}% scalebar-y at 90% of image height of 1941px = 1747
@@ -457,8 +463,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_MIP_Sagittal}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-					\shadowcolor{ubRedComplementary1}%
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 		\end{column}%
 		\begin{column}{0.35\linewidth}%
@@ -469,20 +474,18 @@
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_MIP_Axial}};
 				% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 				%\draw[|-|,blue,thick] (0,972) -- (1944,972) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 			\end{tikzpicture}%
 		\end{column}%
 		\begin{column}{0.35\linewidth}%
 				\pgfmathsetlength{\imagescale}{\imagewidth/1944}%
-				\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=ubRedComplementary2}}}%
 				\def\x{1201}% scalebar-x starting at golden ratio of image width of 1944px = 1201
 				\def\y{1747}% scalebar-y at 90% of image height of 1941px = 1747
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_MIP_Coronal}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-					\shadowcolor{ubRedComplementary2}%
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 		\end{column}%
 	\end{columns}%
@@ -503,7 +506,7 @@
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
 					\shadowcolor{ubRedComplementary1}%
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\only<3|handout:1>{%
 					\draw[ubRed] (0,970) -- (1944,970);
 				}
@@ -523,7 +526,7 @@
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20220914/Mouse01_Lugol_15pct_20220914_rec_Middle_Axial}};
 				% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 				%\draw[|-|,blue,thick] (0,972) -- (1944,972) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\only<3|handout:1>{%
 					\draw[ubRedComplementary1] (970,0) -- (970,1944);
 					}%
@@ -548,7 +551,7 @@
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
 					\shadowcolor{ubRedComplementary2}%
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 					\only<5|handout:1>{%
 						\draw[ubRed] (0,970) -- (1944,970);
 						}%
@@ -576,7 +579,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Sagittal}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 			}%
 		\end{column}%
@@ -589,7 +592,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Axial}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,972) -- (1944,972) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 				}%
 			\only<2|handout:2>{%
@@ -631,7 +634,7 @@
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/Mouse01_Lugol_15pct_20230421/Mouse01_Lugol_15pct_20230421_rec_Middle_Coronal}};
 					% 1944.000px = 29.16mm -> 100px = 1500.000um -> 33.333px = 500um, 6.667px = 100um
 					%\draw[|-|,blue,thick] (0,970) -- (1944,970) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{29.16}{\milli\meter} (1944px) TEMPORARY!};
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+333.33,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
 			}%
 		\end{column}%
@@ -650,11 +653,12 @@
 				\def\y{1739}% scalebar-y at 90% of image height of 1932px = 1739
 				\def\mag{4}% magnification of inset
 				\def\size{75}% size of inset
+				\tikzset{shadowed/.style={preaction={transform canvas={shift={(1pt,-1pt)}},draw=black}}}%
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]%
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04A_II_8_0_tif-corrected.png}};%
 					\only<2|handout:0>{\spy [black] on (732,936) in node at (2576,966) [anchor=east];}%
 					% 2576.000px = 1.3910400000000003mm -> 100px = 54.000um -> 925.926px = 500 um, 185.185px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+925.926,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
 				\end{tikzpicture}%
 				\sourcecite{Haberthuer2021a}{Abbildung 1a}%
 			\end{column}%
@@ -667,9 +671,9 @@
 				\def\size{75}% size of inset
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale,spy using outlines={rectangle,magnification=\mag,size=\size,connect spies}]%
 					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/R108C04At-mrg1024.rec.8bit.png}};%
-					\only<2|handout:0>{\spy [ultra thick,white] on (1635,318) in node at (0,572.5) [anchor=west];}%
+					\only<2|handout:0>{\spy [white] on (1635,318) in node at (0,572.5) [anchor=west];}%
 					% 2936.000px = 4.34528mm -> 100px = 148.000um -> 337.838px = 500um, 67.568px = 100um
-					\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
+					\draw[|-|,white,shadowed] (\x,\y) -- (\x+337.838,\y) node [midway,above] {\shadowtext{\SI{500}{\micro\meter}}};%
 				\end{tikzpicture}%
 				\sourcecite{Haberthuer2021a}{Abbildung 1e}%
 			\end{column}%
@@ -737,7 +741,7 @@
 				\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/DigitalPathology/10543_1mm_Vert_04um_CCD_nof_60kV/rec/10543_1mm_Vert_04um_CCD_nof_60kV_rec00001241}};%
 				% 3296.000px = 1.3184mm -> 100px = 40.000um -> 1250.000px = 500um, 250.000px = 100um
 				%\draw[|-|,blue,thick] (0,1648) -- (3296,1648) node [sloped,midway,above,fill=white,semitransparent,text opacity=1] {\SI{1.3184}{\milli\meter} (3296px) TEMPORARY!};
-				\draw[|-|,white,thick,shadowed] (\x,\y) -- (\x+625,\y) node [midway,above] {\shadowtext{\SI{250}{\micro\meter}}};%
+				\draw[|-|,white,shadowed] (\x,\y) -- (\x+625,\y) node [midway,above] {\shadowtext{\SI{250}{\micro\meter}}};%
 			\end{tikzpicture}%
 			\sourcelink{https://www.anatomie.unibe.ch/ueber_uns/team/detail/index_ger.php?id=487}{Oleksiy Khoma}%
 		\end{column}%
@@ -773,8 +777,13 @@
 	\only<3|handout:0>{%
 		\begin{tikzpicture}[remember picture,overlay]%
 			\node at (current page.center){%
-				\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}%
-				};%
+				\begin{animateinline}[autoplay,every=\everyframe]{24}%
+      					\multiframe{236}{i=0+1}{\includegraphics[width=\imagewidth]{./movies/mouse_skull/mouse_skull\zeropad{000}{\i}}}%
+	      				\newframe*
+    					\includegraphics[width=\imagewidth]{./movies/mouse_skull/mouse_skull236}% last frame needs to be repeated
+		    			\end{animateinline}				
+					%\animategraphics[loop,autoplay,width=\paperwidth,every=\everyframe]{24}{./movies/mouse_skull/mouse_skull}{000}{236}
+			};%
 		\end{tikzpicture}%
 	}%
 \end{frame}
